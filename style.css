@@ -11,12 +11,14 @@
     display: inline-flex;
     vertical-align: top;
     margin: 5px;
+    
 
 }
 
-.dice_point {
+/* .dice_point {
     outline: solid 2px #aaa;
-}
+    
+} */
 
 .dice_point::before {
     content: "";
@@ -26,12 +28,13 @@
     background-color: #000;
     border-radius: 50%;
 }
-
+/* Первый  кубик */
 .dice_one {
     justify-content: center;
     align-items: center;
 }
 
+/* Второй  кубик */
 .dice_two {
     justify-content: space-between;
 }
@@ -40,6 +43,7 @@
     align-self: flex-end;
 }
 
+/* Третий  кубик */
 .dice_three {
     justify-content: space-between;
 }
@@ -50,4 +54,39 @@
 
 .dice_three .dice_point:nth-child(2) {
     align-self: center
+}
+
+/* Четвертый  кубик */
+.dice_four {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.dice_four .dice_point {
+    width: 50%;
+}
+
+.dice_four .dice_point:nth-child(even) {
+    text-align: right;
+}
+
+<!-- /* Пятый  кубик */ -->
+.dice_five {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.dice_five .dice_point:nth-child(3) {
+    width: 100%;
+    text-align: center;
+}
+
+
+<!-- /* Шестой  кубик */ -->
+.dice_six {
+    flex-flow: wrap column;
+    justify-content: space-between;
+    align-content:space-between
 }
