@@ -1,0 +1,53 @@
+/* базовое оформление */
+.dice {
+    list-style: none;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    border: solid 5px #000;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    display: inline-flex;
+    vertical-align: top;
+    margin: 5px;
+
+}
+
+.dice_point {
+    outline: solid 2px #aaa;
+}
+
+.dice_point::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.dice_one {
+    justify-content: center;
+    align-items: center;
+}
+
+.dice_two {
+    justify-content: space-between;
+}
+
+.dice_two .dice_point:nth-child(1) {
+    align-self: flex-end;
+}
+
+.dice_three {
+    justify-content: space-between;
+}
+
+.dice_three .dice_point:nth-child(1) {
+    align-self: flex-end;
+}
+
+.dice_three .dice_point:nth-child(2) {
+    align-self: center
+}
